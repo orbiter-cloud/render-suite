@@ -5,12 +5,12 @@
 For available configuration check the source repo [readme](https://github.com/orbiter-cloud/render-service#config).
 
 1. [Start Render API](#start-render-api)
-2. [Template Setup](#template-setup)
+2. [Setup Template](#setup-template)
 3. [Use Render Client](#use-render-client)
 
 ## Start Render API
 
-Simply fork / clone / copy this repository, start the container - than setup [a template](#template-setup):
+Simply fork / clone / copy this repository, start the container - than setup [a template](#setup-template):
 
 ```shell
 docker-compose up
@@ -18,7 +18,7 @@ docker-compose up
 
 Orbito Render API: [localhost:3000](http://localhost:3000) (incl. OpenAPI Spec & Docs)
 
-## Template Setup
+## Setup Template
 
 Creates a new `template` folder & file structure in the `templates` folder.
 
