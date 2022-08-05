@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+    render:
+        image: "bemiteu/render:0.1.10"
+        environment:
+            ACCESS_PUBLIC_DESCRIBE: "yes"
+            ACCESS_PUBLIC_RENDER: "yes"
+            APP_ENV: local
+            NODE_ENV: development
+            REDIS_HOST: redis:6379
+            PORT: 80
+            OA_SERVER_SELECT: "false"
+            OA_SERVER_URL: auto
+            CACHE_EX_STYLE: 600
+            # HOME_FOOTER: "<span>my org</span>"
+            # HOME_NO_DOCS: "yes"
+        volumes:
+            - ./locales:/home/node/app/locales
+            - ./templates:/home/node/app/templates
+        depends_on:
+            - redis
+        ports:
+            - "3000:80"
+
+    redis:
+        image: redis:alpine

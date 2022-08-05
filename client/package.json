@@ -1,0 +1,18 @@
+{
+    "name": "orbito-render-client",
+    "private": true,
+    "dependencies": {
+        "@orbito/render-client": "~0.0.2",
+        "superagent": "^8.0.0",
+        "http-server": "^14.1.1",
+        "concurrently": "^7.3.0"
+    },
+    "scripts": {
+        "start": "concurrently \"npm run build\" \"http-server -p 3001 build\"",
+        "build": "node cli.js"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@types/superagent": "^4.1.0"
+    }
+}

@@ -1,0 +1,16 @@
+.env
+.npmrc
+
+/tmp
+/dist
+/build
+
+node_modules
+
+.DS_Store
+
+.idea/
+*.iml
+*.iws
+
+/coverage
